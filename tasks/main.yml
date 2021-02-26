@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-installkaseyaagent
+- name: Download Kaseya kaseya
+  get_url:
+    url: "{{ kaseya_agent_url }}"
+    dest: "{{ script_download_dir }}"
+    mode: 0755
+
+- name: Run downloaded Kaseya agent script
+  command:
+    "{{ script_download_dir }} -V -D -X -e -c -g={{ kaseya_agent_group }}"
+        

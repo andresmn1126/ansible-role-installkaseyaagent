@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-role-installkaseyaagent
+kaseya_agent_url: 
+kaseya_agent_group: 
+script_download_dir: "/tmp/kaseya.sh"
