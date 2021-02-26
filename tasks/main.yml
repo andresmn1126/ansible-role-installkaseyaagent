@@ -8,5 +8,5 @@
 
 - name: Run downloaded Kaseya agent script
   command:
-    "{{ script_download_dir }} -V -D -X -e -c -g={{ kaseya_agent_group }}"
-        
+    "{{ script_download_dir }} -e -c -g={{ kaseya_agent_group }}"
+  ignore_errors: true      
